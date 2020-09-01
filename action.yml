@@ -1,0 +1,18 @@
+name: 'Run arr.ai'
+description: 'Run an arr.ai script as part of a GitHub action.'
+inputs:
+  run:
+    description: 'The arr.ai script to run'
+    required: false
+  eval:
+    description: 'The arr.ai script to eval'
+    required: false
+outputs:
+  result:
+    description: 'The output of the arr.ai program'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - run
+    - ${{ inputs.file }}
