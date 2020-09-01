@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Eval hello world
       id: hello
-      uses: orlade/arrai-action@v1
+      uses: orlade/arrai-action@v0.1
       with:
         eval: '"Hello, world!"'
     # Use the output from the `hello` step
